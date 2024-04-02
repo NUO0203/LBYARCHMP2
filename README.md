@@ -47,4 +47,4 @@ ii **Screenshot of the program output with the correctness check (C)**
 
 iii **Screenshot of the program output with the correctness check (x86-64)**
 
-<img width="965" alt="Screenshot 2024-04-02 at 7 22 51 PM" src="https://github.com/NUO0203/LBYARCHMP2/assets/114644434/9645c119-3d0e-40dd-b030-8cb3e8774323">
+![432744597_1156014305412730_6648406650937021570_n](https://github.com/NUO0203/LBYARCHMP2/assets/114644434/94106aaf-dadb-4069-b2b5-33ab8f840aae)
