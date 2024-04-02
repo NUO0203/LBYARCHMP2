@@ -2,20 +2,21 @@
 
 **Debug Mode:**
 
-In debug mode, the Assembly implementation is consistently faster than the C implementation across all vector sizes. This is likely due to the fact that Assembly allows for more direct control over the hardware, which can lead to more efficient code execution.
+In debug mode, the Assembly implementation consistently outperforms the C implementation across all vector sizes. This is likely due to the fact that Assembly allows for more direct control over the hardware, leading to more efficient code execution. However, the lack of compiler optimizations in debug mode can lead to slower execution times compared to release mode.
 
 
 For a vector size of 2^20
 
-  The Assembly code is roughly 3.35 times faster than the C code. This significant speedup could be attributed to the efficient use of registers and the direct manipulation of memory in the Assembly code.
+  The Assembly code is roughly 3.35 times faster than the C code. This significant speedup could be attributed to the efficient use of registers and the direct manipulation of memory in the Assembly code. The lower-level control provided by Assembly allows for optimizations that are not possible in a higher-level language like C.
 
 For a vector size of 2^24
 
-  The speedup factor decreases slightly to around 3.06. This could be due to increased cache misses as the vector size grows, which can impact the performance of both implementations. However, the Assembly code still outperforms the C code.
+  The speedup factor decreases slightly to around 3.06. This could be due to increased cache misses as the vector size grows, which can impact the performance of both implementations. However, the Assembly code still outperforms the C code, demonstrating its efficiency in handling larger data sets.
 
 For a vector size of 2^26
 
-  The speedup factor increases again to around 3.63. This suggests that the Assembly code scales better with larger vector sizes, possibly due to more efficient memory access patterns or better utilization of CPU resources.
+  The speedup factor increases again to around 3.63. This suggests that the Assembly code scales better with larger vector sizes, possibly due to more efficient memory access patterns or better utilization of CPU resources. This scalability is crucial for performance-critical applications that need to process large amounts of data.
+
 
 
 
@@ -26,15 +27,17 @@ In release mode, the execution times are generally faster compared to debug mode
 
 For a vector size of 2^20
 
-  The Assembly code is roughly 1.51 times faster than the C code. While the speedup is less pronounced than in debug mode, the Assembly code still performs better.
+  The Assembly code is roughly 1.51 times faster than the C code. While the speedup is less pronounced than in debug mode, the Assembly code still performs better. This shows that even with compiler optimizations, the Assembly code can still provide a performance advantage.
+
 
 For a vector size of 2^24
 
-  The speedup factor decreases slightly to around 1.47. As with debug mode, this could be due to increased cache misses as the vector size grows.
+  The speedup factor decreases slightly to around 1.47. As with debug mode, this could be due to increased cache misses as the vector size grows. However, the fact that the Assembly code still outperforms the C code demonstrates its efficiency.
 
 For a vector size of 2^26
 
-  The speedup factor increases to around 2.39. Again, this suggests that the Assembly code scales better with larger vector sizes.
+  The speedup factor increases to around 2.39. Again, this suggests that the Assembly code scales better with larger vector sizes. This scalability is crucial in release mode, where performance is often a key consideration.
+
 
 
 **Analysis Report for Kernel**
@@ -48,10 +51,9 @@ For a vector size of 2^26
 
 **Summary:**
 
-From these results, we can conclude that the Assembly implementation consistently outperforms the C implementation across all tested vector sizes and in both debug and release modes. However, the degree of speedup varies depending on the specific circumstances.
+It's also worth noting that while the Assembly code is faster, it is also likely to be more complex and harder to maintain than the equivalent C code. Therefore, the decision to use Assembly should be based on a careful consideration of the trade-offs involved. Factors such as the performance requirements of the application, the available development resources, and the maintainability of the code should all be taken into account.
 
-It’s also worth noting that while the Assembly code is faster, it is also likely to be more complex and harder to maintain than the equivalent C code. Therefore, the decision to use Assembly should be based on a careful consideration of the trade-offs involved.
-
+Furthermore, it’s important to remember that these results are specific to the particular system and environment in which the tests were run. Performance can be influenced by many factors, including the specific hardware, the operating system, the compiler, and the runtime environment. Therefore, it’s always a good idea to thoroughly test and benchmark your code under realistic conditions to understand its performance characteristics.
 
 
 ii **Screenshot of the program output with the correctness check (C)**
