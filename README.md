@@ -18,6 +18,8 @@ For a vector size of 2^26
   The speedup factor increases again to around 3.63. This suggests that the Assembly code scales better with larger vector sizes, possibly due to more efficient memory access patterns or better utilization of CPU resources.
 
 
+
+
 **Release Mode:**
 
 In release mode, the execution times are generally faster compared to debug mode. This is expected, as release mode enables compiler optimizations that can significantly improve performance.
